@@ -81,3 +81,10 @@ Fig is an open source Docker project that makes it easier to manage docker conta
 Fig is written in Python and has a great tutorial for using Fig to manage a Django app and a PostgreSQL database. You should go through that tutorial: http://orchardup.github.io/fig/django.html
 
     If you aren't using one of my cloud servers or the Vagrant Box in this repo, then you will need to install Fig yourself. Instructions are here: http://orchardup.github.io/fig/install.html
+
+What's next?
+------------
+
+Congratulations, you're now a budding dockeristo/a! If there is any swag left at the front of the class, you should grab some.
+
+If you want to keep working with docker, check out the advanced tutorial in this repo for other cool projects to check out.
