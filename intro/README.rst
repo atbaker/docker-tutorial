@@ -15,9 +15,13 @@ Installing docker is more complicated than installing your average application, 
 
 - If you are doing this tutorial in one of my classes, you may want to use one of the cloud servers I have already provided. Ask me for the connection details.
 - If you have `Vagrant <http://www.vagrantup.com/>`_ and `VirtualBox <https://www.virtualbox.org/>`_ installed, you can use the Vagrantfile in this repo to quickly provision your server:
-    # Install Ansible if you haven't already. You have a few options on this page - I find the package manager or ``pip`` to be easiest: http://docs.ansible.com/intro_installation.html#latest-releases-via-pip
-    # ``cd`` to the base directory of this repo
-    # ``vagrant up`` to start your VM. It will install Docker automatically.
+
+  - Install Ansible if you haven't already. You have a few options on this page - I find apt, yum, or ``pip`` to be easiest: http://docs.ansible.com/intro_installation.html#latest-releases-via-pip
+  - ``cd`` to the base directory of this repo
+  - ``vagrant up`` to start your VM. It will install Docker automatically.
+    - If you have port forwarding issues, try closing Chrome and then ``vagrant up``-ing again.
+  - Connect to the VM with ``vagrant ssh``. This repo will be mounted in the VM at ``/vagrant``
+
 - If you're using a Mac, you may want to use Boot2Docker instead: http://docs.docker.io/installation/mac/
 - If you want to work natively in Linux, follow the appropriate instructions for your OS: http://docs.docker.io/installation/#installation
 
@@ -36,7 +40,7 @@ Exercise 2: Fire it up!
 
 It's time to start your first Docker containers!
 
-    *I won't provide all the answers here. To complete this (and future) exercises, you will need to use the Docker docs (http://docs.docker.io/) and your intuition!*
+    I won't provide all the answers here. To complete this (and future) exercises, you will need to use the Docker docs (http://docs.docker.io/) and your intuition!
 
 Pull down this docker image from the docker index: ``atbaker/sd-django``
 
@@ -48,7 +52,7 @@ Now let's say we wanted to update the navbar header on the homepage to be "Sampl
 
 Start a container with the ``atbaker/sd-django`` image again, this time in an interactive shell. Use a text editor of your choice to update the navbar text. Then exit the shell session.
 
-    *You rarely need to use the full container/image ID value when issuing commands to the docker client. Usually the first few characters are sufficient.*
+    You rarely need to use the full container/image ID value when issuing commands to the docker client. Usually the first few characters are sufficient.
 
 That edit was just to a single container. If we want that edit to be included next time we start a new container from this image, we need to commit the change to a new image.
 
@@ -63,5 +67,5 @@ In the previous exericse updating the navbar text in the Django app was a somewh
 
 That's where `Dockerfiles <http://docs.docker.io/reference/builder/>`_ come in. Dockerfiles and the ``docker build`` command programatically build your docker images. If you keep your Dockerfile with your source code, you can include the latest source every time you build your docker image (perhaps with a Continuous Integration service).
 
-In the **intro** subdirectory, you will find the source code for the sample Django project and a partially completed Dockerfile. **Complete the Dockerfile and use ``docker build`` to create a new image for this Django app.** Then create a container from that image to test if it works.
+In the **intro** subdirectory, you will find the source code for the sample Django project and a partially completed Dockerfile. **Complete the Dockerfile and use** ``docker build`` **to create a new image for this Django app.** Then create a container from that image to test if it works.
 
