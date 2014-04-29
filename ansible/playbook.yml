@@ -1,12 +1,9 @@
 ---
-# Deploys spin-docker to an Ubuntu server
+# Deploys docker to an Ubuntu 14.04 server
 
 - name: Install and configure docker
   hosts: all
   sudo: True
-
-  vars:
-    host: $inventory_hostname
 
   roles:
     - docker

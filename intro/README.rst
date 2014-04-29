@@ -13,7 +13,7 @@ Exercise 0: Setting up your development environment
 
 Installing docker is more complicated than installing your average application, but fortunately the documentation is great. You have a few options:
 
-- If you are doing this tutorial in one of my classes, you may want to use one of the cloud servers I have already provided. Ask me for the connection details.
+- If you are doing this tutorial in one of my classes, you may want to use one of the cloud servers I have already provided. Connection info here: http://bit.ly/1kqr9WG
 - If you have `Vagrant <http://www.vagrantup.com/>`_ and `VirtualBox <https://www.virtualbox.org/>`_ installed, you can use the Vagrantfile in this repo to quickly provision your server:
 
   - Install Ansible if you haven't already. You have a few options on this page - I find apt, yum, or ``pip`` to be easiest: http://docs.ansible.com/intro_installation.html#latest-releases-via-pip
