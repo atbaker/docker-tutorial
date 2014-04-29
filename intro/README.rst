@@ -36,8 +36,7 @@ Exercise 2: Fire it up!
 
 It's time to start your first Docker containers!
 
-.. HINT::
-    I won't provide all the answers here. To complete this (and future) exercises, you will need to use the Docker docs (http://docs.docker.io/) and your intuition!
+    *I won't provide all the answers here. To complete this (and future) exercises, you will need to use the Docker docs (http://docs.docker.io/) and your intuition!*
 
 Pull down this docker image from the docker index: ``atbaker/sd-django``
 
@@ -49,8 +48,7 @@ Now let's say we wanted to update the navbar header on the homepage to be "Sampl
 
 Start a container with the ``atbaker/sd-django`` image again, this time in an interactive shell. Use a text editor of your choice to update the navbar text. Then exit the shell session.
 
-.. HINT::
-    You rarely need to use the full container/image ID value when issuing commands to the docker client. Usually the first few characters are sufficient.
+    *You rarely need to use the full container/image ID value when issuing commands to the docker client. Usually the first few characters are sufficient.*
 
 That edit was just to a single container. If we want that edit to be included next time we start a new container from this image, we need to commit the change to a new image.
 
@@ -64,4 +62,6 @@ Exercise 3: Dockerizing a Django app
 In the previous exericse updating the navbar text in the Django app was a somewhat tedious process. Even if we were using `git <http://git-scm.com/>`_ to version control our Django source code, you would still need to create a new container with a shell, update it, and then commit your changes to an image before you could deploy those changes anywhere else.
 
 That's where `Dockerfiles <http://docs.docker.io/reference/builder/>`_ come in. Dockerfiles and the ``docker build`` command programatically build your docker images. If you keep your Dockerfile with your source code, you can include the latest source every time you build your docker image (perhaps with a Continuous Integration service).
+
+In the **intro** subdirectory, you will find the source code for the sample Django project and a partially completed Dockerfile. **Complete the Dockerfile and use ``docker build`` to create a new image for this Django app.** Then create a container from that image to test if it works.
 
