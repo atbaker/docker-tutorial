@@ -69,3 +69,15 @@ That's where `Dockerfiles <http://docs.docker.io/reference/builder/>`_ come in. 
 
 In the **intro** subdirectory, you will find the source code for the sample Django project and a partially completed Dockerfile. **Complete the Dockerfile and use** ``docker build`` **to create a new image for this Django app.** Then create a container from that image to test if it works.
 
+    There are some hints in the Dockerfile comments, but you'll want to reference the Dockerfile documentation as well: http://docs.docker.io/reference/builder/
+
+Exercise 4: Using Fig to manage your development environment
+------------------------------------------------------------
+
+In exercise 3 you created a Dockerfile to help you build new docker images when you updated your source code. In this exercise you will learn how to use `Fig <http://orchardup.github.io/fig/index.html>`_ to make things even easier.
+
+Fig is an open source Docker project that makes it easier to manage docker containers in your development environment. It was created by the people behind `Orchard <https://www.orchardup.com/>`_, a Docker hosting service.
+
+Fig is written in Python and has a great tutorial for using Fig to manage a Django app and a PostgreSQL database. You should go through that tutorial: http://orchardup.github.io/fig/django.html
+
+    If you aren't using one of my cloud servers or the Vagrant Box in this repo, then you will need to install Fig yourself. Instructions are here: http://orchardup.github.io/fig/install.html
