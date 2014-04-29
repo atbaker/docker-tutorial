@@ -21,8 +21,8 @@ Advanced tutorial
 
 For people who have used docker before. It includes a survey of different docker projects, plus an exercise to get you working with the docker API. Students will:
 
-- Learn how to use `Drone <https://drone.io/>`_, `Deis <http://deis.io/>`_, and `Tutum <http://www.tutum.co/>`_
-- Use the docker API and git commit hooks to automatically run Selenium acceptance tests
+- Check out `Drone <https://drone.io/>`_, `Deis <http://deis.io/>`_, and `Tutum <http://www.tutum.co/>`_
+- Use the docker API and git commit hooks to automate a small build process
 - Discuss how you're using docker with other folks
 
 See the **advanced** subdirectory to get started.
