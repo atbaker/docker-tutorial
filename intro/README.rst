@@ -67,5 +67,5 @@ In the previous exericse updating the navbar text in the Django app was a somewh
 
 That's where `Dockerfiles <http://docs.docker.io/reference/builder/>`_ come in. Dockerfiles and the ``docker build`` command programatically build your docker images. If you keep your Dockerfile with your source code, you can include the latest source every time you build your docker image (perhaps with a Continuous Integration service).
 
-In the **intro** subdirectory, you will find the source code for the sample Django project and a partially completed Dockerfile. **Complete the Dockerfile and use ``docker build`` to create a new image for this Django app.** Then create a container from that image to test if it works.
+In the **intro** subdirectory, you will find the source code for the sample Django project and a partially completed Dockerfile. **Complete the Dockerfile and use** ``docker build`` **to create a new image for this Django app.** Then create a container from that image to test if it works.
 
