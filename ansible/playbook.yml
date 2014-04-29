@@ -1,0 +1,12 @@
+---
+# Deploys spin-docker to an Ubuntu server
+
+- name: Install and configure docker
+  hosts: all
+  sudo: True
+
+  vars:
+    host: $inventory_hostname
+
+  roles:
+    - docker

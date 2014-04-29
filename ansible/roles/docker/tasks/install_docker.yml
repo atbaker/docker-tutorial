@@ -1,0 +1,24 @@
+---
+# Install Docker
+
+- name: Get kernel release version
+  command: uname -r
+  register: kernel_version
+
+- name: Install AUFS support
+  apt: pkg=linux-image-extra-{{ kernel_version.stdout }} state=present
+
+- name: Add apt_repository dependencies
+  apt: pkg={{ item }} state=present
+  with_items:
+    - python-apt
+    - python-pycurl
+
+- name: Add docker.io key
+  apt_key: url=https://get.docker.io/gpg state=present
+
+- name: Add docker repository
+  apt_repository: repo='deb http://get.docker.io/ubuntu docker main' state=present
+
+- name: Install docker
+  apt: update_cache=yes pkg=lxc-docker

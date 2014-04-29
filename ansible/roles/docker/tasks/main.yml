@@ -1,0 +1,9 @@
+---
+# Docker role tasks
+
+- name: Update apt cache
+  apt: update_cache=yes cache_valid_time=3600
+
+- include: install_docker.yml
+# - include: install_spin_docker.yml
+# - include: pull_images.yml
