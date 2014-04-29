@@ -1,7 +1,7 @@
 Docker 101 Tutorials
 ====================
 
-These tutorials accompany `a short presentation given at April's Django District <http://slides.com/atbaker/docker-101>`_. This repo includes a `Vagrantfile <http://www.vagrantup.com/>`_ and `Ansible playbook <http://www.ansible.com/`_ which provision a Docker daemon on an Ubuntu 14.04 LTS server to minimize time students spend configuring their environments.
+These tutorials accompany `a short presentation given at April's Django District <http://slides.com/atbaker/docker-101>`_. This repo includes a `Vagrantfile <http://www.vagrantup.com/>`_ and `Ansible playbook <http://www.ansible.com/>`_ which provision a Docker daemon on an Ubuntu 14.04 LTS server to minimize time students spend configuring their environments.
 
 Introductory tutorial
 ---------------------
