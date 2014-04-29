@@ -1,0 +1,8 @@
+---
+# Install Fig
+
+- name: Install pip
+  apt: pkg=python-pip state=present
+
+- name: Install fig
+  pip: name=fig state=present

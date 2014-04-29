@@ -1,6 +1,7 @@
 # Example dockerfile for a Two Scoops-style Django project
 # https://github.com/atbaker/docker-tutorial | https://github.com/twoscoops/django-twoscoops-project
 
+# All Dockerfiles start from a base image. In this case, Ubuntu 12.04 LTS
 FROM ubuntu:precise
 
 # Add yourself as maintainer
