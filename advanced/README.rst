@@ -1,7 +1,7 @@
 Advanced docker tutorial
 ========================
 
-This tutorials is for people who already understand the basics of using docker. 
+This tutorial is for people who already understand the basics of using docker. 
 
 It's not really a lesson with exercises - it's more a survey of different projects and services that are using docker to do something new. My goal with this content is to provide jumping off points so you can learn more about what interests you the most.
 

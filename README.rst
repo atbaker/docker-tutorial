@@ -19,7 +19,7 @@ See the **intro** subdirectory to get started.
 Advanced tutorial
 -----------------
 
-For people who have used docker before. It includes a survey of different docker projects, plus an exercise to get you working with the docker API. Students will:
+This tutorial is for people who already understand the basics of using docker. It includes a survey of different docker projects, plus an exercise to get you working with the docker API. Students will:
 
 - Check out `Drone <https://drone.io/>`_, `Deis <http://deis.io/>`_, and `Tutum <http://www.tutum.co/>`_
 - Play with the docker API
