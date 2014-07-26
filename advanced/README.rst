@@ -10,8 +10,8 @@ Drone
 
 `Drone <https://drone.io/>`_ is a new open source docker based Continuous Integration service built with Go. It's under very active development and has a pretty substantial feature set for being a young project.
 
-GitHub: https://github.com/drone/drone
-Installation: http://drone.readthedocs.org/en/latest/setup.html
+- GitHub: https://github.com/drone/drone
+- Installation: http://drone.readthedocs.org/en/latest/setup.html
 
 Go ahead and check out Drone. You can try to install it yourself if you follow the documentation on ReadtheDocs. If you need a sample Django project, you can use the ``sd_sample_project`` in this directory.
 
@@ -24,8 +24,8 @@ Both projects are still under active development, but the impression I get is th
 
 Because Deis is a little easier to set up, I recommend experimenting with it today.
 
-Github: https://github.com/deis/deis
-Installation: http://deis.io/get-deis/
+- Github: https://github.com/deis/deis
+- Installation: http://deis.io/get-deis/
 
 Tutum
 -----
