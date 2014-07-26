@@ -3,9 +3,7 @@ Advanced docker tutorial
 
 This tutorials is for people who already understand the basics of using docker. 
 
-It's not really a lesson with exercises - it's more a survey of different projects and services that are using docker to do something new. My goal with this tutorial is to provide jumping off points so you can learn more about what interests you the most.
-
-You can also use this opportunity to talk with the other people here who are already using docker. With new tech like docker evolving so quickly, we all have something to teach each other.
+It's not really a lesson with exercises - it's more a survey of different projects and services that are using docker to do something new. My goal with this content is to provide jumping off points so you can learn more about what interests you the most.
 
 Drone
 -----
@@ -40,7 +38,7 @@ I have experimented with Tutum and found them easy to use. Like Orchard, they of
 
 http://www.tutum.co/
 
-    **DISCLAIMER:** Tutum is providing an additional $15 worth of hosting credit to people who attend this tutorial. They also give me a little extra credit for reviewing their service. Free credit aside, however, I would still recommend trying it.
+    **DISCLAIMER:** Tutum is providing an additional $15 worth of hosting credit to people who attend this tutorial. They also gave me a little extra credit for reviewing their service. Free credit aside, however, I would still recommend trying it.
 
 Docker API
 ----------

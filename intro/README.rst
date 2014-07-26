@@ -30,23 +30,28 @@ Installing docker is more complicated than installing your average application, 
 Exercise 1: Docker and dockerfile basics
 ----------------------------------------
 
-The official docker.io tutorials are the best way to ease in to working with docker. They are concise and informative. You should skim through them now before proceeding to exercise 2:
+The official docker.io tutorial is the best way to ease in to working with docker. It is concise and informative. You should do it now before proceeding to exercise 2:
 
-- Interactive command line tutorial: https://www.docker.io/gettingstarted/
-- Dockerfile tutorial: https://www.docker.io/learn/dockerfile (if you're running behind, you can skip level 02)
+**Interactive command line tutorial:** https://www.docker.com/tryit/
+
+You should also learn about Dockerfiles. This post by DigitalOcean is a good overview - skim it before you proceed:
+
+https://www.digitalocean.com/community/tutorials/docker-explained-using-dockerfiles-to-automate-building-of-images
 
 Exercise 2: Fire it up!
 -----------------------
 
 It's time to start your first Docker containers!
 
-    I won't provide all the answers here. To complete this (and future) exercises, you will need to use the Docker docs (http://docs.docker.io/) and your intuition!
+    I won't provide all the answers here. To complete this (and future) exercises, you will need to use the Docker docs (https://docs.docker.com/) and your intuition!
 
 Pull down this docker image from the docker index: ``atbaker/sd-django``
 
 Start a container from this image using the ``docker run`` command. Don't forget to pass the correct options to publish port 80 to your localhost. Confirm that your container is running with the ``docker ps`` command.
 
-If your container started successfully, you should be able to access the Django app at an address like http://localhost:49178/
+If your container started successfully, you should be able to access the Django app at an address like http://localhost:49178/ (your port will likely be different)
+
+(If it bothers you that you have to use ``sudo`` when running docker commands, you can add your user to the docker group by following the instructions on this page under "Giving non-root access": https://docs.docker.com/installation/ubuntulinux/#ubuntu-trusty-1404-lts-64-bit.)
 
 Now let's say we wanted to update the navbar header on the homepage to be "Sample docker site" instead of "sd_sample_project". We need to edit the file in the container at ``/var/www/django/sd_sample_project/templates/base.html``.
 
@@ -58,6 +63,8 @@ That edit was just to a single container. If we want that edit to be included ne
 
 Commit your change to a new image (use ``atbaker/sd-django`` or your own namespace), then create a new container from that image and check it out in a browser to make sure it worked.
 
+**NOTE:** When you try to create a new container from your new image, you will need to specify its run command manually. The run command for this container is ``/sbin/my_init``.
+
 That's the basics of working with containers and images. Before we move on to the next exercise, it's a good idea to stop your running containers with the ``docker stop`` command since we don't need them anymore.
 
 Exercise 3: Dockerizing a Django app
@@ -65,11 +72,11 @@ Exercise 3: Dockerizing a Django app
 
 In the previous exericse updating the navbar text in the Django app was a somewhat tedious process. Even if we were using `git <http://git-scm.com/>`_ to version control our Django source code, you would still need to create a new container with a shell, update it, and then commit your changes to an image before you could deploy those changes anywhere else.
 
-That's where `Dockerfiles <http://docs.docker.io/reference/builder/>`_ come in. Dockerfiles and the ``docker build`` command programatically build your docker images. If you keep your Dockerfile with your source code, you can include the latest source every time you build your docker image (perhaps with a Continuous Integration service).
+That's where `Dockerfiles <http://docs.docker.com/reference/builder//>`_ come in. Dockerfiles and the ``docker build`` command programatically build your docker images. If you keep your Dockerfile with your source code, you can include the latest source every time you build your docker image (perhaps with a Continuous Integration service).
 
 In the **intro** subdirectory, you will find the source code for the sample Django project and a partially completed Dockerfile. **Complete the Dockerfile and use** ``docker build`` **to create a new image for this Django app.** Then create a container from that image to test if it works.
 
-    There are some hints in the Dockerfile comments, but you'll want to reference the Dockerfile documentation as well: http://docs.docker.io/reference/builder/
+    There are some hints in the Dockerfile comments, but you'll want to reference the Dockerfile documentation as well: http://docs.docker.com/reference/builder/
 
 Exercise 4: Using Fig to manage your development environment
 ------------------------------------------------------------
@@ -85,6 +92,6 @@ Fig is written in Python and has a great tutorial for using Fig to manage a Djan
 What's next?
 ------------
 
-Congratulations, you're now a budding dockeristo/a! If there is any swag left at the front of the class, you should grab some.
+Congratulations, you're now a budding dockeristo/a!
 
 If you want to keep working with docker, check out the advanced tutorial in this repo for other cool projects to check out.

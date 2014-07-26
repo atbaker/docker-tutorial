@@ -1,24 +1,18 @@
 ---
 # Install Docker
 
-- name: Get kernel release version
-  command: uname -r
-  register: kernel_version
+- name: Add apt-transport-https
+  apt: pkg=apt-transport-https state=present
 
-- name: Install AUFS support
-  apt: pkg=linux-image-extra-{{ kernel_version.stdout }} state=present
+# - name: Add docker.io key
+#   apt_key: url=https://get.docker.io/gpg state=present
+#   hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
 
-- name: Add apt_repository dependencies
-  apt: pkg={{ item }} state=present
-  with_items:
-    - python-apt
-    - python-pycurl
-
-- name: Add docker.io key
-  apt_key: url=https://get.docker.io/gpg state=present
+- name: Add docker key
+  command: apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 36A1D7869245C8950F966E92D8576A8BA88D21E9
 
 - name: Add docker repository
-  apt_repository: repo='deb http://get.docker.io/ubuntu docker main' state=present
+  apt_repository: repo='deb https://get.docker.io/ubuntu docker main' state=present
 
 - name: Install docker
   apt: update_cache=yes pkg=lxc-docker
