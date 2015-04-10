@@ -1,6 +1,8 @@
 Docker 101 Tutorials
 ====================
 
+**NOTE: Docker moves fast and this tutorial is now out of date. Please reference one of my more recent Docker tutorials.**
+
 These tutorials accompany `a short presentation <http://slides.com/atbaker/docker-101>`_.
 
 This repo includes a `Vagrantfile <http://www.vagrantup.com/>`_ and `Ansible playbook <http://www.ansible.com/>`_ which provision a docker daemon on an Ubuntu 14.04 LTS server to minimize time students spend configuring their environments.
